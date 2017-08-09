@@ -8,7 +8,8 @@
     "start": "node dist/app.js",
     "build": "gulp build",
     "dev": "gulp",
-    "clean": "gulp clean"
+    "clean": "gulp clean",
+    "server": "npm run clean && npm run build && npm start"
   },
   "dependencies": {
     "body-parser": "~1.13.2",

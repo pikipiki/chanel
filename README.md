@@ -18,6 +18,9 @@ All JS is coded under [ES6](http://es6-features.org/) and webpack / babel are us
 - `PORT` variable set the port of the application, if not the port bind on 3000
 - `ENV` variable set the env of the app. It's **dev** or **prod**
 
+## GIT
+All development has to be made on the `dev` branch or you have to checkout a new one from the master.
+Merging with the master must be done by `pull request`
 
 ## Install
 
