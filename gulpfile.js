@@ -35,3 +35,4 @@ gulp.task('server', function() {
 
 gulp.task('default', ['clean', 'es6', 'json', 'server']);
 gulp.task('build', ['es6', 'json']);
+gulp.task('heroku', ['clean', 'build']);
