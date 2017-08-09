@@ -9,7 +9,7 @@
     "build": "gulp build",
     "dev": "gulp",
     "clean": "gulp clean",
-    "heroku": "node_modules/gulp/bin/gulp heroku && npm start"
+    "heroku": "node node_modules/gulp/bin/gulp heroku && npm start"
   },
   "dependencies": {
     "body-parser": "~1.13.2",
