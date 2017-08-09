@@ -6,6 +6,6 @@ before_script:
 deploy-staging:
   type: deploy
   script:
-    - dpl --provider=heroku --app=marketplace-frontend-staging --api-key=$HEROKU_STAGING_API
+    - dpl --provider=heroku --app=flush-gordon --api-key=$HEROKU_PRODUCTION_API
   only:
     - master
