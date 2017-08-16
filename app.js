@@ -1,16 +1,17 @@
 "use strict";
 import express      from 'express';
-import path         from 'path';
 import logger       from 'morgan';
 import cookieParser from 'cookie-parser';
 import bodyParser   from 'body-parser';
 import http         from 'http'
 
 import { routeIndex }       from './routes/index';
+import DB from './lib/db';
 
 const app = express();
 const server = http.createServer(app);
 const port = process.env.PORT || 3000;
+const db = DB(app);
 
 app.use(logger('dev'));
 app.use(bodyParser.json());

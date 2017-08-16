@@ -22,17 +22,16 @@ gulp.task('clean', function () {
 
 
 gulp.task('server', function() {
-    // configure nodemon
     nodemon({
         script: 'dist/app.js',
         watch: ["app.js", "routes/*", 'lib/*', 'middleware/*', 'config/*'],
         ext: 'js json',
-        tasks: ['es6', 'json']
+        tasks: ['build']
     }).on('restart', function() {
         gulp.src('app.js').pipe(notify('Server successfully restarted'));
     })
 });
 
-gulp.task('default', ['clean', 'es6', 'json', 'server']);
+gulp.task('default', ['clean', 'build', 'server']);
 gulp.task('build', ['es6', 'json']);
 gulp.task('heroku', ['clean', 'build']);

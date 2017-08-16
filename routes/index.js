@@ -1,5 +1,5 @@
 'use strict';
 
 export function routeIndex(req, res){
-    res.json({message: "OK"});
+    res.json({message: "Hello World"});
 }
