@@ -16,7 +16,7 @@ router.post('/', isAuth, function(req, res) {
         format.setText(`${data.userName} you need to give me args after the command`);
         format.isTemporary(true);
         format.addAttachment(colors.red, null, "/flush-gordon [commands] [args]", null);
-        res.status(400).json(format.getPayload());
+        res.status(200).json(format.getPayload());
     }
     else {
         db.commands.find({ name: data.text[0], is_active: true }, function (err, command) {
@@ -24,14 +24,14 @@ router.post('/', isAuth, function(req, res) {
                 format.setText(`Sorry ${data.userName} an error occurred, please try again`);
                 format.isTemporary(true);
                 format.addAttachment(colors.red, null, err.message, null);
-                res.status(500).json(format.getPayload());
+                res.status(200).json(format.getPayload());
 
             }
             else if (command.length === 0 || commands[command[0].function] === undefined) {
                 format.setText(`${data.userName} i'm not sure to really understand`);
                 format.isTemporary(true);
                 format.addAttachment(colors.red, null, `the command ${data.text[0]} doesn't exist`, null);
-                res.status(400).json(format.getPayload());
+                res.status(200).json(format.getPayload());
             }
             else {
                 data.text.shift(); // Remove the command from the args
