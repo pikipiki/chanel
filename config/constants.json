@@ -1,0 +1,9 @@
+{
+  "slack": {
+    "temporaryType": "ephemeral"
+  },
+  "akamai": {
+    "flushUrl": "https://api.ccu.akamai.com/ccu/v2/queues/default",
+    "purgeStatusUrl": "https://api.ccu.akamai.com/ccu/v2/purges/{purgeID}"
+  }
+}
