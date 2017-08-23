@@ -1,6 +1,7 @@
 {
   "slack": {
-    "temporaryType": "ephemeral"
+    "temporaryType": "ephemeral",
+    "token": "jWM0c0VsaKjOuhL7qUf2HySI"
   },
   "akamai": {
     "flushUrl": "https://api.ccu.akamai.com/ccu/v2/queues/default",
