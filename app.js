@@ -1,45 +1,42 @@
-"use strict";
-var express = require('express');
-import logger       from 'morgan';
-import cookieParser from 'cookie-parser';
+'use strict';
+
 import bodyParser   from 'body-parser';
-import http         from 'http'
+import cookieParser from 'cookie-parser';
+import express      from 'express';
+import http         from 'http';
+import logger       from 'morgan';
 
-import routeProducts       from './routes/products';
-import routeIndex       from './routes/index';
+import apiRoutes    from './src/routes';
+import db           from './src/models';
 
-var app = express();
+const app = express();
 const server = http.createServer(app);
-let port = process.env.PORT || 3001;
+const port = process.env.PORT || 3001;
+
+
+
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.set("view engine","twig");
-app.use(express.static('views'));
+app.set('view engine', 'twig');
+app.use(express.static('statics'))
+app.set('views', './src/views');
 
-// app.get('/', routeIndex);
-app.use('/products', routeProducts);
-app.get('/products/list', function(req, res) {
-    var sqlite3 = require('sqlite3').verbose();
-    var db = new sqlite3.Database('database.sqlite');
+app.use('/api', apiRoutes);
 
-    db.all("SELECT * FROM products", function(err, rows) {
-        res.render('list', {products: rows});
-    });
-
-    db.close();
-})
-
-app.close = function() {
+app.close = () => {
     server.close();
+    db.close();
 }
 
 app.listen(() => {
     server.listen(port, () => {
-        console.log("Express server listening on port " + port + " in " + app.settings.env + " mode");
+        console.log(`Express server listening on port ${port} in ${app.settings.env} mode`);
     });
 });
+
+////////////
 
 export default app;
