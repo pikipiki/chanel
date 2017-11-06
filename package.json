@@ -1,17 +1,15 @@
 {
-  "name": "flush-gordon",
+  "name": "test-refactoring",
   "version": "1.0.0",
-  "description": "Slack bot that automatically flush CDN",
+  "description": "Refactoring of HTML/JS/CSS web application",
   "license": "MIT",
-  "author": "Florian GUERIN",
+  "author": "CHANEL",
   "scripts": {
     "start": "node dist/app.js",
     "test": "mocha",
     "build": "gulp build",
-    "dev": "gulp",
-    "clean": "gulp clean",
-    "heroku": "node node_modules/gulp/bin/gulp heroku && npm start",
-    "cover": "node_modules/.bin/istanbul cover node_modules/.bin/mocha -- -u exports --compilers js:babel-register --timeout 60000"
+    "dev": "gulp clean && gulp",
+    "clean": "gulp clean"
   },
   "dependencies": {
     "babel-cli": "^6.24.1",
@@ -28,13 +26,14 @@
     "gulp-nodemon": "^2.2.1",
     "gulp-notify": "^3.0.0",
     "http": "0.0.0",
-    "istanbul": "^0.4.5",
-    "mocha": "^3.5.0",
+    "jade": "^1.11.0",
     "morgan": "~1.6.1",
     "mysql": "^2.14.1",
     "orm": "^3.2.4",
     "request": "^2.81.0",
     "rimraf": "^2.6.1",
+    "sqlite3": "^3.1.12",
+    "twig": "^1.10.5",
     "url-parser": "0.0.1",
     "validator": "^8.0.0"
   }

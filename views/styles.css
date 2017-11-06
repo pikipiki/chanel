@@ -1,0 +1,38 @@
+header{
+    padding: 70px 0;
+}
+
+ul{
+    list-style: none;
+}
+
+
+.listing{
+    margin-top: 25px;
+}
+
+.listing li{
+    display: inline-block;
+    width: 40%;
+    margin: 5% 0;
+}
+
+.listing li button{
+    border: none;
+    background: transparent;
+    color: #FFF;
+}
+
+section.container{
+    margin-top: 15px;
+}
+
+a[href].btn-primary{
+    outline:none;
+}
+
+a.logo{
+    height:55px;
+    width:350px;
+    background: url("http://www.chanel.com/img/logo_chanel.svg") scroll no-repeat top left;
+}

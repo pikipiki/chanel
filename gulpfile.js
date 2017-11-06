@@ -10,6 +10,9 @@ gulp.task('es6', () => {
         .pipe(gulp.dest('dist'))
 });
 
+var notify = require('gulp-notify');
+var clean = require('gulp-clean');
+
 gulp.task('json', () => {
     return gulp.src(['config/*'], {base: "."})
         .pipe(gulp.dest('dist'))
@@ -32,6 +35,6 @@ gulp.task('server', function() {
     })
 });
 
-gulp.task('default', ['clean', 'build', 'server']);
+gulp.task('default', ['build', 'server']);
 gulp.task('build', ['es6', 'json']);
 gulp.task('heroku', ['clean', 'build']);

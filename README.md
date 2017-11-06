@@ -1,26 +1,46 @@
-# Flush Gordon
+# CHANEL Interview
 
-[![build status](https://gitlab.com/Epitech-42/flush-gordon/badges/master/build.svg)](https://gitlab.com/Epitech-42/flush-gordon/commits/master)
-[![coverage report](https://gitlab.com/Epitech-42/flush-gordon/badges/master/coverage.svg)](https://gitlab.com/Epitech-42/flush-gordon/commits/master)
+## Explanation of the test
 
-## Informations
+The purpose of this test is to refactor the project.
+As you can see, the quality of the HTML, JS and CSS is very bad and your goal is to clean up and offer the best version of this project.
 
-The project is developed with NojdeJS / Express
+The test is in two part:
+1. Refactor the code
+2. Write your comments/advices about the project and the explanations about your choice of refactoring
+3. Publish your code on Github
 
-All JS is coded under [ES6](http://es6-features.org/) and webpack / babel are used to compile everythings
+**Don't worry if you can't do all of it, just do your best :). We prefer very clean and useful small changes rather than lots of unfinished changes.** 
+
+## 1. Refactoring
+
+You are free to refactor the code as you wish to achieve the following criteria:
+- Show a better version of the pages List, View and Cart
+- Add accessibility and seo requirements
+- Refactor the JS code
+- Improve the folder architecture
+- Good use of Git and branches
+
+## 2. Comments/advices & Explanation
+In the `COMMENTS.md`, we need the following information:
+- Your comments/advices about the project
+- Your explanation about your choice of refactoring
+
+## 3. Publish your code on Github
+To share the new version of the project with us, you need to put the code on a public Github repo and send the link at **florian.guerin@chanel-corp.com**.
+
+## Happy Coding!
+If you have any information about this file, you can ask Florian GUERIN or Ibrael ESPINOSA
+
+
+# Technical information
 
 ## Stack 
-- NodeJS 7.4.0
+- NodeJS 8.4.0
 - ES6
-
-## Environment
-
-- `PORT` variable set the port of the application, if not the port bind on 3000
-- `NODE_ENV` variable set the env of the app. It's **development** or **production**
-
-## GIT
-All development has to be made on the `dev` branch or you have to checkout a new one from the master.
-Merging with the master must be done by `pull request`
+- Twig
+- [Bootstrap](http://getbootstrap.com/) 
+- Git
 
 ## Install
 
@@ -31,11 +51,11 @@ The first step is to install all dependencies:
 
 ## Dev mode
 
-To build in dev mode the project:
+To build the project in dev mode with the hot reload after any changes:
 
     > npm run dev
 
-After that, you can reach the project at [localhost:3000](http://localhost:3000) 
+After that, you can reach the project at [localhost:3001](http://localhost:3001) 
 
 ## Build in production and start
 To build in production mode the project:
@@ -44,11 +64,6 @@ To build in production mode the project:
     > npm start
     
 The whole app will be transpiled to es5 in the folder `dist/`
-
-#### Deploy
-To deploy, run the following command to move the transpiled files to the virtual env of the web server
-
-    > cp dist/* path/to/target/server
     
 ## Clean the build
 
@@ -56,13 +71,5 @@ To clean the build create with the command above:
 
     > npm run clean
 
-## Test
-
-#### Check if the server is properly launched
-- If you run the project in dev mode using `npm start`, check if you have the following output:
-       
-     > Express server listening on port 3000 in development mode
-
-     
 
 
