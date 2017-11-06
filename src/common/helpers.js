@@ -1,12 +1,16 @@
 'use strict';
+
 import URL from 'url-parser';
+
+
+
 
 class urlHelper{
     constructor(){
-        this.domains = [];
+      this.domains = [];
     }
 }
 
-export {
-    urlHelper
-};
+////////////
+
+export default urlHelper;

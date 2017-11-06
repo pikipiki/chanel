@@ -1,0 +1,15 @@
+.listing{
+    margin-top: 25px;
+}
+
+.listing li{
+    display: inline-block;
+    width: 40%;
+    margin: 5% 0;
+}
+
+.listing li button{
+    border: none;
+    background: transparent;
+    color: #FFF;
+}
